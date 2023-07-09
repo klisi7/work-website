@@ -55,6 +55,36 @@ nav{
     color: #fefefe;
 }
 
+.header_box{
+    margin:20px 50px 25vh 50px;
+    color: #fefefe;
+    text-align: center;
+}
+
+.header_box h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    background-color: rgba(0, 0, 0, .3);
+    text-shadow: 1px 1px #5cd2c6;
+}
+
+.header_box p{
+    font-size: 2rem;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, .3);
+    margin-bottom: 40px;
+    text-shadow: 1px 1px #363753;
+}
+
+.header_box a{
+    background-color: #5cd2c6;
+    padding: 15px 30px;
+    border-radius: 20px;
+    color: #FEFEFE;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 2rem;
+}
 
 
 @media only screen and (max-width: 900px){
@@ -110,5 +140,30 @@ nav{
         font-weight: bold;
         font-size: 1.6rem;
         color: #FEFEFE;
+    }
+
+    nav{
+        background-color: transparent;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .header_box{
+        margin:20px 30px 30vh 30px;
+
+    }
+    
+    .header_box h1{
+        font-size: 2.5rem;
+    }
+
+    .header_box p{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .header_box h1{
+        font-size: 2rem;
     }
 }
