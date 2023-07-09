@@ -1,9 +1,9 @@
 var nav = document.querySelector("nav");
 
 document.querySelector(".toggle").onclick = () =>{
-    let menu_list = document.querySelector(".menu_list");
     
-    menu_list.classList.toggle("active");
+    document.querySelector(".menu_list").classList.toggle("active");
+    document.querySelector("nav").classList.toggle("blur");
 };  
 
 document.querySelectorAll(".nav_links").forEach(links =>{
