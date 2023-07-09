@@ -53,6 +53,12 @@ nav{
 .nav_links.tel{
     background-color: #5cd2c6;
     color: #fefefe;
+    transition: all .3s;
+}
+
+.nav_links.tel:hover{
+    background-color: #0c7c71;
+    transition: all .3s;
 }
 
 .header_box{
@@ -78,12 +84,18 @@ nav{
 
 .header_box a{
     background-color: #5cd2c6;
-    padding: 15px 30px;
+    padding: 10px 30px;
     border-radius: 20px;
     color: #FEFEFE;
     text-decoration: none;
     margin-top: 10px;
     font-size: 2rem;
+    transition: all .3s;
+}
+
+.header_box a:hover{
+    background-color: #0c7c71;
+    transition: all .3s;
 }
 
 
@@ -96,11 +108,12 @@ nav{
     .toggle .bar{
         display: flex;
         padding-right: 10px;
-        width: 40px;
-        height: 5px;
+        width: 60px;
+        height: 8px;
         margin: 5px;
         background: #FEFEFE;
         border-radius: 5px;
+        box-shadow: 1px 1px 1px #5cd2c6;
     }
 
     .menu_list{
