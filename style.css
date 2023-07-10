@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
 }
 
 header{
@@ -214,7 +218,7 @@ main .munka_card a:hover{
         display: block;
         width: fit-content;
         text-align: center;
-        margin: 80px auto 40px auto;
+        margin: 40px auto 40px auto;
         transition: all 0.2s;
         opacity: 0;
     }
