@@ -9,5 +9,6 @@ document.querySelector(".toggle").onclick = () =>{
 document.querySelectorAll(".nav_links").forEach(links =>{
     links.onclick = function(){
         document.querySelector(".menu_list").classList.remove("active");
+        document.querySelector("nav").classList.remove("blur");
     }
 })
