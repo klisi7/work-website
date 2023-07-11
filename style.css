@@ -187,6 +187,16 @@ main{
     transition: all .3s;
 }
 
+.hidden{
+    opacity: 0;
+    transition: all .7s;
+}
+
+.show{
+    opacity: 1;
+    transition: all .7s;
+}
+
 #munkak .munka_card a:hover{
     background-color: #0c7c71;
     transition: all .3s;
