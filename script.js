@@ -12,3 +12,21 @@ document.querySelectorAll(".nav_links").forEach(links =>{
         document.querySelector("nav").classList.remove("blur");
     }
 })
+
+
+let observer = new IntersectionObserver(target =>{
+    target.forEach(entry =>{
+        console.log(entry);
+        if(entry.isIntersecting)
+            entry.target.classList.add("show");
+        else
+            entry.target.classList.remove("show");
+    })
+})
+
+let hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach(el => observer.observe(el));
+
+
+
+console.log(hiddenElements);
