@@ -233,6 +233,8 @@ main{
     }
 
     .menu_list.active{
+        display: flex;
+        align-items: center;
         height: 450px;
         transition: all 0.3s;
         backdrop-filter: blur(10px);
@@ -245,8 +247,11 @@ main{
     }
 
     .menu_list ul {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         width: fit-content;
+        height: 100%;
         text-align: center;
         margin: 40px auto 40px auto;
         transition: all 0.2s;
@@ -279,7 +284,7 @@ main{
 
 @media only screen and (max-width: 600px){
     .header_box{
-        margin:20px 30px 25vh 30px;
+        margin:20px 30px 15vh 30px;
     }
     
     .header_box h1{
