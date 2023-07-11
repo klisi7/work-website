@@ -189,17 +189,25 @@ main{
 
 .hidden{
     opacity: 0;
-    transition: all .7s;
+    filter: blur(3px);
+    transition: all .5s;
 }
 
 .show{
     opacity: 1;
-    transition: all .7s;
+    filter: blur(0);
+    transition: all .5s;
 }
 
 #munkak .munka_card a:hover{
     background-color: #0c7c71;
     transition: all .3s;
+}
+
+@media(prefers-reduce-motion){
+    .hidden{
+        transition: none;
+    }
 }
 
 @media only screen and (max-width: 1400px){
