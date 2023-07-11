@@ -145,6 +145,7 @@ main{
     justify-content: space-around;
     width: fit-content;
     padding: 20px;
+    margin-bottom: 100px;
 }
 
 #munkak .munka_card{
@@ -190,19 +191,104 @@ main{
 .hidden{
     opacity: 0;
     filter: blur(3px);
-    transition: all .5s;
+    transition: all .7s;
 }
 
 .show{
     opacity: 1;
     filter: blur(0);
-    transition: all .5s;
+    transition: all .7s;
 }
 
 #munkak .munka_card a:hover{
     background-color: #0c7c71;
     transition: all .3s;
 }
+
+#rolunk{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 50px 30px;
+    background-color:#363753;
+}
+
+#rolunk .rolunk_description{
+    margin: 50px 30px;
+    display: grid;
+    place-items: center;
+}
+
+#rolunk .rolunk_description p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: justify;
+    max-width: 80%;
+    color: #fefefe;
+}
+
+#rolunk h2{
+    text-align: center;
+    color: #5cd2c6;
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+#rolunk section{
+    padding: 30px;
+    max-width: 60%;
+}
+
+#rolunk section h3{
+    text-align: center;
+    font-size: 1.6rem;
+    color: #5cd2c6;
+    margin: 20px 0;
+}
+
+#rolunk section p{
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: #fefefe;
+    line-height: 2rem;
+    text-align: center;
+}
+
+#rolunk .rolunk_kapcsolat{
+    max-width: 70%;
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#rolunk .rolunk_kapcsolat h3{
+    text-align: center;
+    font-size: 2rem;
+    color: #5cd2c6;
+    margin-bottom: 40px;
+}
+
+#rolunk .rolunk_kapcsolat a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 8px 30px;
+    background-color: #fefefe;
+    color: #5cd2c6;
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+#rolunk .rolunk_kapcsolat a:hover{
+    background-color: #0c7c71;
+    color: #fefefe;
+    transition: all .3s;
+}
+
 
 @media(prefers-reduce-motion){
     .hidden{
@@ -219,7 +305,9 @@ main{
 }
 
 @media only screen and (max-width: 1200px){
-
+    #rolunk section{
+        max-width: 80%;
+    }
 }
 
 @media only screen and (max-width: 900px){
@@ -311,6 +399,27 @@ main{
 
     .header_box p{
         font-size: 1.5rem;
+    }
+
+    #rolunk section{
+        max-width: 100%;
+    }
+
+    #rolunk .rolunk_description p{
+        font-size: 1.3rem;
+        max-width: 100%;
+    }
+
+    #rolunk h2{
+        font-size: 2.5rem;
+    }
+
+    #rolunk .rolunk_kapcsolat{
+        max-width: 100%;
+    }
+
+    #rolunk .rolunk_kapcsolat h3{
+        font-size: 1.4rem;
     }
 }
 
