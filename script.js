@@ -31,7 +31,7 @@ let carousel = document.querySelector(".carousel");
 let arrowIcons = document.querySelectorAll("#galery_wrapper i");
 let firstImg = carousel.querySelectorAll("img")[0];
 
-let isDragStart = false, prevPageX, prevScrollLeft;
+let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
 let firstImgWidth = firstImg.clientWidth + 14;
 
 
@@ -41,9 +41,23 @@ arrowIcons.forEach(target =>{
     }
 })
 
+let autoSlide = () =>{
+    if(carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth)) return;
+
+    positionDiff = Math.abs(positionDiff);
+    let firstImgWidth = firstImg.clientWidth + 14;
+    let valDifference = firstImgWidth - positionDiff;
+
+    if(carousel.scrollLeft > prevScrollLeft){
+        return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+    }
+    carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+
+}
+
 let dragStart = (e) =>{
     isDragStart = true;
-    prevPageX = e.pageX;
+    prevPageX = e.pageX || e.touches[0].pageX;
     prevScrollLeft = carousel.scrollLeft;
 }
 
@@ -52,17 +66,27 @@ let dragging = (e) =>{
     e.preventDefault();
     carousel.scrollLeft = e.pageX;
 
-    let positionDiff = e.pageX -prevPageX;
+    positionDiff = (e.pageX || e.touches[0].pageX) -prevPageX;
     carousel.scrollLeft = prevScrollLeft - positionDiff;
 
     carousel.classList.add("dragging");
+    isDragging = true;
 }
 
 let dragStop = () =>{
     isDragStart = false;
     carousel.classList.remove("dragging");
+
+    if(!isDragging) return;
+    isDragging = false;
+    autoSlide();
 }
 
 carousel.addEventListener("mousedown", dragStart)
+carousel.addEventListener("touchstart", dragStart)
+
 carousel.addEventListener("mousemove", dragging)
+carousel.addEventListener("touchmove", dragging)
+
 carousel.addEventListener("mouseup", dragStop)
+carousel.addEventListener("touchend", dragStop)
