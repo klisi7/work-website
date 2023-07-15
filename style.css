@@ -251,7 +251,7 @@ main{
 }
 
 #rolunk section p{
-    margin: 20px 0;
+    margin: 20px 15px;
     font-size: 1.5rem;
     color: #fefefe;
     line-height: 2rem;
@@ -269,7 +269,7 @@ main{
 }
 
 #rolunk .rolunk_kapcsolat h3{
-    text-align: center;
+    text-align: justify;
     font-size: 2rem;
     color: #5cd2c6;
     margin-bottom: 40px;
@@ -428,6 +428,10 @@ main{
 
     #rolunk .rolunk_kapcsolat h3{
         font-size: 1.4rem;
+    }
+
+    #rolunk{
+        padding: 50px 10px;
     }
 }
 
