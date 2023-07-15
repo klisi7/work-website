@@ -294,7 +294,14 @@ main{
 #galery_wrapper{
     max-width: 1200px;
     position: relative;
-    margin: 20px;
+    margin: 50px 20px;
+}
+
+#galery_wrapper h2{
+    font-size: 2.5rem;
+    color: #5cd2c6;
+    text-align: center;
+    margin: 50px 20px;
 }
 
 #galery_wrapper i{
@@ -339,7 +346,6 @@ main{
     width: calc(100% / 3);
     margin-left: 14px;
 }
-
 
 
 @media(prefers-reduce-motion){
