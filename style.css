@@ -215,18 +215,10 @@ main{
     background-color:#363753;
 }
 
-#rolunk .rolunk_description{
-    margin: 50px 30px;
-    display: grid;
-    place-items: center;
-}
-
-#rolunk .rolunk_description p{
-    font-size: 1.5rem;
-    line-height: 2rem;
-    text-align: justify;
-    max-width: 80%;
-    color: #fefefe;
+#rolunk .section_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #rolunk h2{
@@ -236,9 +228,19 @@ main{
     margin: 20px 0;
 }
 
-#rolunk section{
+#rolunk .section_container section{
     padding: 30px;
-    max-width: 60%;
+    flex-basis: 30%;
+}
+
+#rolunk section .icon{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.icon img{
+    max-width: 50%;
 }
 
 #rolunk section h3{
@@ -253,7 +255,7 @@ main{
     font-size: 1.5rem;
     color: #fefefe;
     line-height: 2rem;
-    text-align: center;
+    text-align: justify;
 }
 
 #rolunk .rolunk_kapcsolat{
@@ -302,6 +304,10 @@ main{
         flex-direction: column;
         width: 100%;
     }
+
+    #rolunk .section_container section{
+        flex-basis: 50%;
+    }
 }
 
 @media only screen and (max-width: 1200px){
@@ -343,9 +349,7 @@ main{
         align-items: center;
         height: 450px;
         transition: all 0.3s;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgb(0, 0, 0);
     }
 
     .menu_list.active ul{
@@ -368,8 +372,13 @@ main{
         margin: 15px;
         font-weight: bold;
         font-size: 1.6rem;
-        color: #FEFEFE;
+        color: #5cd2c6;
         text-shadow: 1px 1px #363753;
+    }
+
+    .nav_links.tel {
+        background-color: #fefefe;
+        color: #5cd2c6;
     }
 
     nav{
@@ -380,12 +389,16 @@ main{
     }
 
     nav.blur{
-        background-color: rgba(0, 0, 0, .9);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background-color: rgb(0, 0, 0);
     }
 
+    .icon img{
+        width: 50%;
+    }
 
+    #rolunk .section_container section{
+        flex-basis: 100%;
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -402,11 +415,6 @@ main{
     }
 
     #rolunk section{
-        max-width: 100%;
-    }
-
-    #rolunk .rolunk_description p{
-        font-size: 1.3rem;
         max-width: 100%;
     }
 
