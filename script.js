@@ -66,7 +66,7 @@ let dragging = (e) =>{
     e.preventDefault();
     carousel.scrollLeft = e.pageX;
 
-    positionDiff = (e.pageX || e.touches[0].pageX) -prevPageX;
+    positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
     carousel.scrollLeft = prevScrollLeft - positionDiff;
 
     carousel.classList.add("dragging");
