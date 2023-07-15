@@ -291,6 +291,61 @@ main{
     transition: all .3s;
 }
 
+#galery_wrapper{
+    max-width: 1200px;
+    position: relative;
+    margin: 20px;
+}
+
+#galery_wrapper i{
+    position: absolute;
+    top: 50%;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 46px;
+    background: #fefefe;
+    border-radius: 50%;
+    border: 1px solid #5cd2c6;
+}
+
+#galery_wrapper i:first-child{
+    display: none;
+}
+
+
+#galery_wrapper i:last-child{
+    right: -18px;
+}
+
+#galery_wrapper .carousel{
+    white-space: nowrap;
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 10px;
+    scroll-behavior: smooth;
+}
+
+#galery_wrapper .carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+#galery_wrapper .carousel.dragging img{
+    pointer-events: none;
+}
+
+
+.carousel img{
+    height: 340px;
+    object-fit: cover;
+    width: calc(100% / 3);
+    margin-left: 14px;
+}
+
+
 
 @media(prefers-reduce-motion){
     .hidden{
@@ -350,6 +405,7 @@ main{
         height: 450px;
         transition: all 0.3s;
         background-color: rgb(0, 0, 0);
+        max-width: 100%;
     }
 
     .menu_list.active ul{
@@ -399,6 +455,10 @@ main{
     #rolunk .section_container section{
         flex-basis: 100%;
     }
+
+    .carousel img{
+        width: calc(100% / 2);
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -432,6 +492,14 @@ main{
 
     #rolunk{
         padding: 50px 10px;
+    }
+
+    #rolunk .section_container section {
+        padding: 30px 20px;
+    }
+
+    .carousel img{
+        width: 100%;
     }
 }
 
