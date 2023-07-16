@@ -90,3 +90,7 @@ carousel.addEventListener("touchmove", dragging)
 
 carousel.addEventListener("mouseup", dragStop)
 carousel.addEventListener("touchend", dragStop)
+
+document.querySelector(".arak a").onclick = () =>{
+    document.querySelector(".ar_tablazat").classList.toggle("open");
+}
