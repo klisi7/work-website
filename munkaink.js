@@ -104,6 +104,33 @@ document.querySelectorAll(".options button").forEach(target =>{
 
         target.classList.add("selected");
 
-        
+        let targetInnerHTML = target.innerHTML;
+
+        document.querySelector(".carousel").innerHTML = "";
+
+        if(targetInnerHTML == "Fürdőszobák"){
+            for(let i = 0; i < furdoSzoba.length; i++){
+                let newImg = document.createElement("img");
+                newImg.src = furdoSzoba[i];
+
+                document.querySelector(".carousel").appendChild(newImg);
+            }
+        }
+        else if(targetInnerHTML == "Konyhák"){
+            for(let i = 0; i < konyha.length; i++){
+                let newImg = document.createElement("img");
+                newImg.src = konyha[i];
+
+                document.querySelector(".carousel").appendChild(newImg);
+            }
+        }
+        else if(targetInnerHTML == "Terasz, kültér"){
+            for(let i = 0; i < kulter.length; i++){
+                let newImg = document.createElement("img");
+                newImg.src = kulter[i];
+
+                document.querySelector(".carousel").appendChild(newImg);
+            }
+        }
     }
 })
