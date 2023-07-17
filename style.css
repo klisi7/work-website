@@ -318,7 +318,7 @@ main{
 #galery_wrapper{
     max-width: 1200px;
     position: relative;
-    margin: 50px 20px;
+    margin: 50px 40px 50px 30px;
 }
 
 #galery_wrapper h2{
@@ -344,8 +344,9 @@ main{
 }
 
 #galery_wrapper i:last-child{
-    right: -18px;
+    right: -10px;
 }
+
 
 #galery_wrapper .carousel{
     white-space: nowrap;
@@ -532,6 +533,7 @@ main{
 .options .selected{
     background-color: #5cd2c6;
     transition: all .3s;
+    color: #363753;
 }
 
 @media(prefers-reduce-motion){
