@@ -90,6 +90,9 @@ carousel.addEventListener("touchmove", dragging)
 carousel.addEventListener("mouseup", dragStop)
 carousel.addEventListener("touchend", dragStop)
 
+let furdoSzoba = ["img/header-5.jpg", "img/home-carousel-img1.jpg", "img/home-carousel-img9.jpg"];
+let konyha = ["img/home-carousel-img5.jpg", "img/home-carousel-img6.jpg", "img/konyha-card.jpg"];
+let kulter = ["img/home-carousel-img2.jpg", "img/home-carousel-img3.jpg", "img/home-carousel-img4.jpg", "img/home-carousel-img7.jpg", "img/terasz-card.jpg"];
 
 document.querySelectorAll(".options button").forEach(target =>{
     target.onclick = () =>{
@@ -100,5 +103,7 @@ document.querySelectorAll(".options button").forEach(target =>{
             targetItem.classList.remove("selected");
 
         target.classList.add("selected");
+
+        
     }
 })
