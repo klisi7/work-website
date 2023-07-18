@@ -476,6 +476,7 @@ main{
     font-size: 1.4rem;
     text-decoration: none;
     transition: all .3s;
+    text-align: center;
 }
 
 .footer .footer_ul ul .nav_links:hover{
@@ -512,6 +513,15 @@ main{
     transition: all .3s;
 }
 
+#galery_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    padding: 50px 20px;
+}
+
 .options{
     margin-bottom: 70px;
     display: flex;
@@ -538,6 +548,57 @@ main{
     background-color: #5cd2c6;
     transition: all .3s;
     color: #363753;
+}
+
+#galery{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+#galery img{
+    max-width: 70%;
+    margin: 5px;
+}
+
+.munka_btns{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.munka_kapcsolat{
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 8px 20px;
+    background-color: #5cd2c6;
+    color: #fefefe;
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+.munka_kapcsolat:hover{
+    background-color: #0c7c71;
+    transition: all .3s;
+    color: #fefefe;
+}
+
+.up_btn{
+    display: none;
+    text-decoration: none;
+    place-items: center;
+    position: absolute;
+    right: 30px;
+    padding: 5px 10px;
+    background-color: #5cd2c6;
+    color: #fefefe;
+    border-radius: 100%;
+    font-size: 1.5rem;
 }
 
 @media(prefers-reduce-motion){
@@ -684,6 +745,10 @@ main{
         align-items: center;
         justify-content: space-between;
     }
+
+    #galery img {
+        max-width: 90%;
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -734,11 +799,29 @@ main{
 
     .options a{
         padding: 5px;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .menu_list{
         top: 60px;
+    }
+
+    #galery_container{
+        padding: 50px 0 60px 0;
+    }
+
+    #galery img {
+        max-width: 100%;
+        margin: 5px 0;
+    }
+
+    .up_btn{
+        display: grid;
+    }
+
+    .footer .logo img{
+        height: 60px;
+        width: 150px;
     }
 }
 
