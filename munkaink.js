@@ -106,9 +106,6 @@ document.querySelectorAll(".options a").forEach(target =>{
 
         carousel.innerHTML = "";
 
-
-        carousel.scrollLeft = 0;
-
         if(target.innerHTML == "Fürdőszobák"){
             for(let i = 0; i < furdoSzoba.length; i++){
                 let newImg = document.createElement("img");
@@ -117,6 +114,7 @@ document.querySelectorAll(".options a").forEach(target =>{
                 newImg.draggable = "false";
 
                 document.querySelector(".carousel").appendChild(newImg);
+
             }
         }
         else if(target.innerHTML == "Konyhák"){
