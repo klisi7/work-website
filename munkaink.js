@@ -94,7 +94,7 @@ let furdoSzoba = ["img/header-5.jpg", "img/home-carousel-img1.jpg", "img/home-ca
 let konyha = ["img/home-carousel-img5.jpg", "img/home-carousel-img6.jpg", "img/konyha-card.jpg"];
 let kulter = ["img/home-carousel-img2.jpg", "img/home-carousel-img3.jpg", "img/home-carousel-img4.jpg", "img/home-carousel-img7.jpg", "img/terasz-card.jpg"];
 
-document.querySelectorAll(".options button").forEach(target =>{
+document.querySelectorAll(".options a").forEach(target =>{
     target.onclick = () =>{
 
         let targetItem = document.querySelector(".options .selected");
@@ -104,30 +104,34 @@ document.querySelectorAll(".options button").forEach(target =>{
 
         target.classList.add("selected");
 
-        let targetInnerHTML = target.innerHTML;
+        carousel.innerHTML = "";
 
-        document.querySelector(".carousel").innerHTML = "";
 
-        if(targetInnerHTML == "Fürdőszobák"){
+        carousel.scrollLeft = 0;
+
+        if(target.innerHTML == "Fürdőszobák"){
             for(let i = 0; i < furdoSzoba.length; i++){
                 let newImg = document.createElement("img");
                 newImg.src = furdoSzoba[i];
+                newImg.alt = "img";
 
                 document.querySelector(".carousel").appendChild(newImg);
             }
         }
-        else if(targetInnerHTML == "Konyhák"){
+        else if(target.innerHTML == "Konyhák"){
             for(let i = 0; i < konyha.length; i++){
                 let newImg = document.createElement("img");
                 newImg.src = konyha[i];
+                newImg.alt = "img";
 
                 document.querySelector(".carousel").appendChild(newImg);
             }
         }
-        else if(targetInnerHTML == "Terasz, kültér"){
+        else if(target.innerHTML == "Terasz, kültér"){
             for(let i = 0; i < kulter.length; i++){
                 let newImg = document.createElement("img");
                 newImg.src = kulter[i];
+                newImg.alt = "img";
 
                 document.querySelector(".carousel").appendChild(newImg);
             }
