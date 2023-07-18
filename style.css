@@ -518,8 +518,11 @@ main{
     justify-content: center;
 }
 
-.options button{
-    padding: 10px 20px;
+.options a{
+    text-decoration: none;
+    color: #363753;
+    background-color: #c5c5c5;
+    padding: 5px 20px;
     margin: 0 10px;
     border: none;
     cursor: pointer;
@@ -600,7 +603,7 @@ main{
     .menu_list{
         height: 0;
         position: absolute;
-        top: 60px;
+        top: 50px;
         left: 0;
         right: 0;
         width: 100vw;
@@ -728,9 +731,13 @@ main{
         line-height: 2rem;
     }
 
-    .options button{
+    .options a{
         padding: 5px;
         font-size: 1rem;
+    }
+
+    .menu_list{
+        top: 60px;
     }
 }
 
