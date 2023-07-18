@@ -34,20 +34,45 @@
 
     <main>
 
-        <div id="galery_wrapper">
+        <div id="galery_container">
+
             <div class="options">
-                <a class="selected" href="#galery_wrapper">Fürdőszobák</a>
-                <a href="#galery_wrapper">Konyhák</a>
-                <a href="#galery_wrapper">Terasz, kültér</a>
+                <a class="selected" href="#galery" data-value="furdoSzoba">Fürdőszobák</a>
+                <a href="#galery" data-value="konyha">Konyhák</a>
+                <a href="#galery" data-value="kulter">Terasz, kültér</a>
             </div>
 
-            <i id="left" class="fa-solid fa-angle-left"></i>
-            <div class="carousel hidden">
-                <img src="img/header-5.jpg" alt="img" draggable="false">
-                <img src="img/home-carousel-img1.jpg" alt="img" draggable="false">
-                <img src="img/home-carousel-img9.jpg" alt="img" draggable="false">
+            <div id="galery">
+                <img src="img/header-5.jpg" alt="Fürdőszobák" class="hidden">
+                <img src="img/home-carousel-img1.jpg" alt="Fürdőszobák" class="hidden">
+                <img src="img/home-carousel-img9.jpg" alt="Fürdőszobák" class="hidden">
             </div>
-            <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+
+        <div class="munka_btns">
+            <a href="#" class="munka_kapcsolat">Kapcsolat</a>
+            <a href="#galery_container" class="up_btn"><i class="fa fa-arrow-up"></i></a>
+        </div>
+
+        <div class="footer">
+            <div class="logo">
+                <img src="img/hannyis-logo.png" alt="logo">
+            </div>
+
+            <div class="footer_ul">
+                <ul>
+                    <a href="#" class="nav_links">Főoldal</a>
+                    <a href="munkaink.html" class="nav_links">Munkáink</a>
+                    <a href="#rolunk" class="nav_links">Rólunk</a>
+                    <a href="#" class="nav_links">Kapcsolat</a>
+                    <a href="tel:06204989995" class="nav_links tel">Hívás</a>
+                </ul>
+            </div>
+
+            <div class="footer_social">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
         </div>
     </main>
     <script src="munkaink.js"></script>
