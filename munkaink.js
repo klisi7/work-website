@@ -114,6 +114,7 @@ document.querySelectorAll(".options a").forEach(target =>{
                 let newImg = document.createElement("img");
                 newImg.src = furdoSzoba[i];
                 newImg.alt = "img";
+                newImg.draggable = "false";
 
                 document.querySelector(".carousel").appendChild(newImg);
             }
@@ -123,6 +124,7 @@ document.querySelectorAll(".options a").forEach(target =>{
                 let newImg = document.createElement("img");
                 newImg.src = konyha[i];
                 newImg.alt = "img";
+                newImg.draggable = "false";
 
                 document.querySelector(".carousel").appendChild(newImg);
             }
@@ -132,6 +134,7 @@ document.querySelectorAll(".options a").forEach(target =>{
                 let newImg = document.createElement("img");
                 newImg.src = kulter[i];
                 newImg.alt = "img";
+                newImg.draggable = "false";
 
                 document.querySelector(".carousel").appendChild(newImg);
             }
