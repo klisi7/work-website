@@ -36,15 +36,15 @@ let galery = document.querySelector("#galery");
 let pictures = [
     {
         name: "Fürdőszobák",
-        imgs: ["img/header-5.jpg", "img/home-carousel-img1.jpg", "img/home-carousel-img9.jpg"],
+        imgs: ["img/header-5.jpg", "img/home-carousel-img1.jpg", "img/home-carousel-img9.jpg", "img/bathroom-1.jpg", "img/bathroom-2.jpg", "img/bathroom-3.jpg", "img/bathroom-4.jpg",],
     },
     {
         name: "Konyhák",
-        imgs: ["img/home-carousel-img5.jpg", "img/home-carousel-img6.jpg", "img/konyha-card.jpg"],
+        imgs: ["img/home-carousel-img5.jpg", "img/home-carousel-img6.jpg", "img/konyha-card.jpg", "img/konyha-1.jpg", "img/konyha-2.jpg", "img/konyha-3.jpg", "img/konyha-4.jpg"],
     },
     {
         name: "Terasz, kültér",
-        imgs: ["img/home-carousel-img2.jpg", "img/home-carousel-img3.jpg", "img/home-carousel-img4.jpg", "img/home-carousel-img7.jpg", "img/terasz-card.jpg"],
+        imgs: ["img/home-carousel-img2.jpg", "img/home-carousel-img3.jpg", "img/home-carousel-img4.jpg", "img/home-carousel-img7.jpg", "img/terasz-card.jpg", "img/terrace-1.jpg", "img/terrace-2.jpg", "img/terrace-3.jpg", "img/terrace-4.jpg",],
     },
 ];
 
